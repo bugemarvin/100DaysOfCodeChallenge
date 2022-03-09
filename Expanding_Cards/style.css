@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*,
+*::after,
+*::before {
+  padding: 0 auto;
+  margin: 0 auto;
+  box-sizing: inherit;
+  overflow: hidden; 
+}
+
+body {
+  color: rgb(119, 119, 119);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Muli', sans-serif;  
+}
+
+.container{
+    display: flex;
+    width: 90%;
+}
+
+.panel{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    margin: 10px;
+    position: relative;
+    border-radius: 50px;
+    color: #ffffff;
+    cursor: pointer;
+    flex: 0.5;
+    transition: flex 0.7s ease-in;
+}
+
+.panel:nth-child(1){
+    background-image: url(./img/Cloudy_mountains.jpg);
+}
+
+.panel:nth-child(2){
+    background-image: url(./img/green_frorest.jpg);
+}
+
+.panel:nth-child(3){
+    background-image: url(./img/snow_escapment.jpg);
+}
+
+.panel:nth-child(4){
+    background-image: url(./img/the_beach.jpg);
+}
+.panel:nth-child(5){
+    background-image: url(./img/Cloudy_mountains.jpg);
+}
+
+.panel h3{
+    font-size: 18px;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+}
+.panel.active{
+    flex:5;
+}
+
+.panel.active h3{
+    opacity: 1;
+}
+
+@media (max-width:600px) {
+    .container{
+        width: 100%;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+    }
+}
